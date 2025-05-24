@@ -51,6 +51,7 @@ const Skills = () => {
         {
           listSkills.map((value, key) => (
             <div key={key} className='item'>
+              <h3>{value.name}</h3>
               <FontAwesomeIcon icon={value.icon} />
               <div className="des">
                 {value.des}
