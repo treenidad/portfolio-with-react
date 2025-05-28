@@ -81,7 +81,7 @@ section {
     & .content {
       font-family: "MuseoModerno", system-ui;
       & .name {
-        font-size: 7em;
+        font-size: 4em;
         font-weight: bold;
         line-height: 1em;
         & span {
@@ -270,9 +270,110 @@ section {
       }
     }
   }
+  &.contacts{
+    padding-bottom: 220px;
+    & .title{
+      font-size: 5vw;
+      text-align: center;
+      font-family: 'MuseoModerno';
+    }
+    & .des{
+      color: #eee5;
+      text-align: center;
+      max-width: 500px;
+      margin: auto;
+    }
+    & .list{
+      text-align: center;
+      & .item{
+        margin-top: 50px;
+      }
+    }
+  }
+}
+.animation{
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  transition: 0.5s;
+  &.active{
+    transform: translateY(0);
+    filter: blur();
+    opacity: 1;
+  }
 }
 @keyframes gradientAnimation {
   to {
     background-position: 200% center;
+  }
+}
+.icon-bar{
+  display: none;
+}
+
+@media screen and (max-width: 767px){
+  section{
+    padding: 20px;
+    &.home{
+      grid-template-columns: 1fr;
+      padding-top: 70px;
+      & .content{
+        & .name{
+          font-size: 3em;
+        }
+        & a{
+          margin: auto;
+          font-size: small;
+        }
+      }
+      & .avatar{
+        grid-row-start: 1;
+      }
+    }
+    &.skills{
+      & .list{
+        grid-template-columns: 1fr;
+      }
+    }
+    &.projects{
+      & .list{
+        & .item{
+          grid-template-columns: 1fr;
+          & .content{
+            & h3{
+              font-size: 1.2em;
+            }
+          }
+          &:nth-child(2n){
+            & .content, .images{
+              grid-column-start: auto;
+              grid-column-end: auto;
+              grid-row-start: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  header{
+    & .icon-bar{
+      display: block;
+    }
+    nav{
+      position: fixed;
+      background-color: #eee;
+      width: 80%;
+      height: 100vh;
+      inset: 0 auto 0 0;
+      color: #010824;
+      flex-direction: column;
+      padding: 50px;
+      box-sizing: border-box;
+      left: -100%;
+      transition: 0.5s;
+      &.active{
+        left: 0;
+      }
+    }
   }
 }

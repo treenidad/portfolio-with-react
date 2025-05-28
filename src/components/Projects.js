@@ -1,6 +1,7 @@
-import React, {useState} from "react";
+import React, {useState, useRef} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faPersonCircleQuestion, faEarthAmericas } from '@fortawesome/free-solid-svg-icons'
+import CustomHook from "./CustomHook";
 
 const Projects = () => {
   const [listProjects] = useState([
@@ -26,20 +27,24 @@ const Projects = () => {
       image:'/project3.png'
     },
   ])
-  
+  const refTab = useRef();
+  const refDivs = useRef([]);
+  CustomHook(refTab, refDivs);
+
+
   return(
-    <section className="projects">
-      <div className="title">
+    <section className="projects" ref={refTab}>
+      <div className="title" ref={(el) => el && refDivs.current.push(el)}>
         This is my Projects
       </div>
       
-      <div className="des">
+      <div className="des" ref={(el) => el && refDivs.current.push(el)}>
         Lorem ipsum dolor sit amet. Sed libero suscipit ab nobis dolorum non consequuntur consequuntur sed voluptatem aliquam ut consectetur rerum. Eos earum sapiente rem facilis ullam qui voluptatum amet At tempore exercitationem non voluptas inventore'
       </div>
       <div className="list">
         {
           listProjects.map((value, key) => (
-            <div key={key} className="item">
+            <div key={key} className="item" ref={(el) => el && refDivs.current.push(el)}>
               <div className="images">
                 <img src={value.images} alt=""/>
               </div>
@@ -65,7 +70,6 @@ const Projects = () => {
           ))
         }
       </div>
-  ))
     </section>
   )
 };

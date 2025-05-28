@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { FontAwesomeIcon, FortAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faReact,
@@ -8,6 +8,7 @@ import {
   faVuejs,
   faLaravel,
 } from "@fortawesome/free-brands-svg-icons";
+import CustomHook from "./CustomHook";
 
 const Skills = () => {
   const [listSkills] = useState([
@@ -42,15 +43,17 @@ const Skills = () => {
       icon: faLaravel,
     },
   ]);
+  const refTab = useRef();
+  const refDivs = useRef([]);
+  CustomHook(refTab, refDivs);
   return (
-    <section className="skills">
-      Skill
-      <div className="title">These are my skills</div>
-      <div className="des">Lorem ipsum</div>
+    <section className="skills" ref={refTab}>
+      <div className="title" ref={(el) => el && refDivs.current.push(el)}>These are my skills</div>
+      <div className="des" ref={(el) => el && refDivs.current.push(el)}>Lorem ipsum</div>
       <div className="list"> 
         {
           listSkills.map((value, key) => (
-            <div key={key} className='item'>
+            <div key={key} className='item' ref={(el) => el && refDivs.current.push(el)}>
               <h3>{value.name}</h3>
               <FontAwesomeIcon icon={value.icon} />
               <div className="des">

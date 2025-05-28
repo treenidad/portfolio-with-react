@@ -1,8 +1,11 @@
-import React from "react";
+import React, {useRef} from "react";
+import CustomHook from "./CustomHook";
 
 const Home = () => {
+  const refTab = useRef();
+  CustomHook(refTab);
   return (
-    <section className="home">
+    <section className="home" ref={refTab}>
       <div className="content">
         <div className="name">
           MY NAME IS <span>Kevin Trinidad</span>
