@@ -11,10 +11,10 @@ const Home = () => {
           MY NAME IS <span>Kevin Trinidad</span>
         </div>
         <div className="des">
-          lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          I'm a recent graduate with a strong academic background and a passion for software development. Currently, I'm gaining hands-on experience at Zaytech Software, where I contribute to innovative projects and collaborate with a dynamic team. My educational journey at San Joaquin Delta College has equipped me with a solid foundation in computer science, fueling my enthusiasm for creating efficient and user-friendly software solutions.​
         </div>
         <a href="/democv.pdf" target="_blank" rel="noopeneer noreferrer">
-          Download My CV
+          DOWNLOAD MY CV
         </a>
       </div>
       <div className="avatar">

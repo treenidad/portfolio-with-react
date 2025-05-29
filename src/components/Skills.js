@@ -5,13 +5,23 @@ import {
   faHtml5,
   faCss3,
   faJs,
-  faVuejs,
-  faLaravel,
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import CustomHook from "./CustomHook";
+import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 
 const Skills = () => {
   const [listSkills] = useState([
+    {
+      name: "React",
+      des: "Lorem ipsum dolor sit amet. Sed libero suscipit ab nobis dolorum non consequuntur consequuntur sed voluptatem aliquam ut consectetur rerum. Eos earum sapiente rem facilis ullam qui voluptatum amet At tempore exercitationem non voluptas inventore.",
+      icon: faReact,
+    },
+    {
+      name: "JS",
+      des: "Lorem ipsum dolor sit amet. Sed libero suscipit ab nobis dolorum non consequuntur consequuntur sed voluptatem aliquam ut consectetur rerum. Eos earum sapiente rem facilis ullam qui voluptatum amet At tempore exercitationem non voluptas inventore.",
+      icon: faJs,
+    },
     {
       name: "HTML",
       des: "Lorem ipsum dolor sit amet. Sed libero suscipit ab nobis dolorum non consequuntur consequuntur sed voluptatem aliquam ut consectetur rerum. Eos earum sapiente rem facilis ullam qui voluptatum amet At tempore exercitationem non voluptas inventore.",
@@ -23,24 +33,14 @@ const Skills = () => {
       icon: faCss3,
     },
     {
-      name: "JS",
+      name: "Github",
       des: "Lorem ipsum dolor sit amet. Sed libero suscipit ab nobis dolorum non consequuntur consequuntur sed voluptatem aliquam ut consectetur rerum. Eos earum sapiente rem facilis ullam qui voluptatum amet At tempore exercitationem non voluptas inventore.",
-      icon: faJs,
+      icon: faGithub,
     },
     {
-      name: "React",
+      name: "MySQL",
       des: "Lorem ipsum dolor sit amet. Sed libero suscipit ab nobis dolorum non consequuntur consequuntur sed voluptatem aliquam ut consectetur rerum. Eos earum sapiente rem facilis ullam qui voluptatum amet At tempore exercitationem non voluptas inventore.",
-      icon: faReact,
-    },
-    {
-      name: "VueJS",
-      des: "Lorem ipsum dolor sit amet. Sed libero suscipit ab nobis dolorum non consequuntur consequuntur sed voluptatem aliquam ut consectetur rerum. Eos earum sapiente rem facilis ullam qui voluptatum amet At tempore exercitationem non voluptas inventore.",
-      icon: faVuejs,
-    },
-    {
-      name: "Laravel",
-      des: "Lorem ipsum dolor sit amet. Sed libero suscipit ab nobis dolorum non consequuntur consequuntur sed voluptatem aliquam ut consectetur rerum. Eos earum sapiente rem facilis ullam qui voluptatum amet At tempore exercitationem non voluptas inventore.",
-      icon: faLaravel,
+      icon: faDatabase,
     },
   ]);
   const refTab = useRef();
@@ -48,7 +48,7 @@ const Skills = () => {
   CustomHook(refTab, refDivs);
   return (
     <section className="skills" ref={refTab}>
-      <div className="title" ref={(el) => el && refDivs.current.push(el)}>These are my skills</div>
+      <div className="title" ref={(el) => el && refDivs.current.push(el)}>Skills</div>
       <div className="des" ref={(el) => el && refDivs.current.push(el)}>Lorem ipsum</div>
       <div className="list"> 
         {
