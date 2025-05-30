@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Connect, connect, useDispatch } from "react-redux";
+import { connect, useDispatch } from "react-redux";
 import { changeTabActive } from "../redux/action";
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { fab } from "@fortawesome/free-brands-svg-icons";
+
 
 const NavBar = ({ activeTab }) => {
   const [listNav] = useState(["home", "skills", "projects", "contacts"]);

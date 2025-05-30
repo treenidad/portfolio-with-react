@@ -28,6 +28,7 @@ const CustomHook = (refTab = null, refDivs = null) => {
             }
             window.addEventListener('scroll', handleScroll);
         }
+        // eslint-disable-next-line
     }, [activeTab])
 }
 

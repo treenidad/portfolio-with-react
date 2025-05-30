@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { FontAwesomeIcon, FortAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faReact,
   faHtml5,
