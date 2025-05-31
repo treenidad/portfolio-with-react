@@ -339,6 +339,11 @@ section {
       & .list{
         & .item{
           grid-template-columns: 1fr;
+          & img{
+            display: block;
+            width: 100%;
+            object-fit: cover;
+          }
           & .content{
             & h3{
               font-size: 1.2em;

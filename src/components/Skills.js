@@ -14,32 +14,32 @@ const Skills = () => {
   const [listSkills] = useState([
     {
       name: "React",
-      des: "Lorem ipsum dolor sit amet. Sed libero suscipit ab nobis dolorum non consequuntur consequuntur sed voluptatem aliquam ut consectetur rerum. Eos earum sapiente rem facilis ullam qui voluptatum amet At tempore exercitationem non voluptas inventore.",
+      des: "Beginner level experience with React. Learning to build basic web applications using functional components and essential hooks (useState, useEffect). Familiar with component structure and basic state management concepts.",
       icon: faReact,
     },
     {
-      name: "JS",
-      des: "Lorem ipsum dolor sit amet. Sed libero suscipit ab nobis dolorum non consequuntur consequuntur sed voluptatem aliquam ut consectetur rerum. Eos earum sapiente rem facilis ullam qui voluptatum amet At tempore exercitationem non voluptas inventore.",
+      name: "JavaScript",
+      des: "Intermediate JavaScript developer with solid understanding of ES6+ features. Experienced with promises, async/await, array methods, and DOM manipulation. Continuing to expand knowledge in advanced concepts.",
       icon: faJs,
     },
     {
       name: "HTML",
-      des: "Lorem ipsum dolor sit amet. Sed libero suscipit ab nobis dolorum non consequuntur consequuntur sed voluptatem aliquam ut consectetur rerum. Eos earum sapiente rem facilis ullam qui voluptatum amet At tempore exercitationem non voluptas inventore.",
+      des: "Intermediate HTML5 skills with good understanding of semantic markup and document structure. Familiar with forms, multimedia elements, and basic accessibility practices. Regularly implementing responsive layouts.",
       icon: faHtml5,
     },
     {
       name: "CSS",
-      des: "Lorem ipsum dolor sit amet. Sed libero suscipit ab nobis dolorum non consequuntur consequuntur sed voluptatem aliquam ut consectetur rerum. Eos earum sapiente rem facilis ullam qui voluptatum amet At tempore exercitationem non voluptas inventore.",
+      des: "Intermediate CSS3 skills including Flexbox and Grid layouts. Comfortable with responsive design, media queries, and animations. Working knowledge of CSS preprocessors and modern styling techniques.",
       icon: faCss3,
     },
     {
       name: "Github",
-      des: "Lorem ipsum dolor sit amet. Sed libero suscipit ab nobis dolorum non consequuntur consequuntur sed voluptatem aliquam ut consectetur rerum. Eos earum sapiente rem facilis ullam qui voluptatum amet At tempore exercitationem non voluptas inventore.",
+      des: "Beginner level Git and GitHub user. Learning version control basics including commits, pushing/pulling, and branch management. Familiar with basic repository operations and collaborative workflows.",
       icon: faGithub,
     },
     {
       name: "MySQL",
-      des: "Lorem ipsum dolor sit amet. Sed libero suscipit ab nobis dolorum non consequuntur consequuntur sed voluptatem aliquam ut consectetur rerum. Eos earum sapiente rem facilis ullam qui voluptatum amet At tempore exercitationem non voluptas inventore.",
+      des: "Beginner level understanding of MySQL databases. Learning to write basic queries, create tables, and perform CRUD operations. Developing knowledge of database design principles and relationships.",
       icon: faDatabase,
     },
   ]);
@@ -49,7 +49,7 @@ const Skills = () => {
   return (
     <section className="skills" ref={refTab}>
       <div className="title" ref={(el) => el && refDivs.current.push(el)}>Skills</div>
-      <div className="des" ref={(el) => el && refDivs.current.push(el)}>Lorem ipsum</div>
+      <div className="des" ref={(el) => el && refDivs.current.push(el)}>Here are the technologies I'm actively learning and developing. While I continue to grow and master these skills, I'm passionate about applying what I've learned so far in real-world projects</div>
       <div className="list"> 
         {
           listSkills.map((value, key) => (

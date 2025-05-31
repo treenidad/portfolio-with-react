@@ -19,7 +19,7 @@ const Home = () => {
       </div>
       <div className="avatar">
         <div className="card">
-          <img src="/profile-pic.jpg" alt="profile-pic" />
+          <img src="/profile-pic.png" alt="profile-pic" />
           <div className="info">
             <div>Developer</div>
             <div>Filipino</div>

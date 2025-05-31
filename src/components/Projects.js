@@ -39,7 +39,7 @@ const Projects = () => {
       </div>
       
       <div className="des" ref={(el) => el && refDivs.current.push(el)}>
-        Lorem ipsum dolor sit amet. Sed libero suscipit ab nobis dolorum non consequuntur consequuntur sed voluptatem aliquam ut consectetur rerum. Eos earum sapiente rem facilis ullam qui voluptatum amet At tempore exercitationem non voluptas inventore'
+        Explore my portfolio of web development and coding projects. Each project demonstrates my skills in different technologies and my ability to solve real-world problems through code.
       </div>
       <div className="list">
         {
